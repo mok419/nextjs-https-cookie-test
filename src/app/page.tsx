@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export default function Home() {
   useEffect(() => {
     async function fetchData() {
-      await fetch('https://nextjs-https-cookie-test.vercel.app/api/samesite/default');
+      await fetch('/api/samesite/default');
       // Optionally, you can do something with the fetched data here
     }
     fetchData();
