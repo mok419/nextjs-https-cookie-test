@@ -3,6 +3,25 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  useEffect(() => {
+    const fetchImage = async () => {
+      try {
+        const response = await fetch('https://auth-poc-next.vercel.app/test-image.png', {
+          credentials: 'include' // Include credentials (cookies) in the request
+        });
+        if (response.ok) {
+          setImageLoaded(true);
+        }
+      } catch (error) {
+        console.error('Error fetching image:', error);
+      }
+    };
+
+    fetchImage();
+  }, []);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>
