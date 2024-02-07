@@ -1,11 +1,18 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
+  // Render loading state while fetching
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  
   useEffect(() => {
     async function fetchData() {
       await fetch('/api/samesite/default');
+      setLoading(false); // Set loading to false when fetch is completed
       // Optionally, you can do something with the fetched data here
     }
     fetchData();
