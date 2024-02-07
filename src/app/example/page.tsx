@@ -27,7 +27,7 @@ export default function Home() {
             <br/>
             <br/>
 
-            <a href="/example"> Check this page for Samesite None cookie</a>
+            <a href="/example"> Check this page for default cookie</a>
     
     
             
