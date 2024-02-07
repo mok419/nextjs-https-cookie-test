@@ -22,8 +22,9 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1>
-        When you visit this site you will receive two default cookies.
+        When you visit this site, the image does not appear.
       </h1>
+      <a href="https://auth-poc-next.vercel.app"> Log in here and then come back!</a>
       {!loading && (
         <img
           src="https://auth-poc-next.vercel.app/test-image.png"
@@ -33,15 +34,6 @@ export default function Home() {
           height={400}
         />
       )}
-            <h2>The image above is from another domain, which checks if you sent a cookie!</h2>
-            <a href="https://auth-poc-next.vercel.app"> You can only request from the other domain if your cookie is sent!</a>
-            <br/>
-            <br/>
-
-            <a href="/example"> Check this page for Samesite None cookie</a>
-    
-    
-            
     </main>
   );
 }
