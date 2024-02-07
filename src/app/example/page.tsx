@@ -27,7 +27,7 @@ export default function Home() {
             <br/>
             <br/>
 
-            <a href="/example"> Check this page for default cookie</a>
+            <a href="/"> Check this page for default cookie</a>
     
     
             
