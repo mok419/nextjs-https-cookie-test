@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      await fetch('/api/samesite/default');
+      await fetch('/api/samesite/default', {credentials: "include"});
       setLoading(false); // Set loading to false when fetch is completed
       // Optionally, you can do something with the fetched data here
       
@@ -24,7 +24,7 @@ export default function Home() {
       <h1>
         When you visit this site, the image does not appear.
       </h1>
-      <a href="https://auth-poc-next.vercel.app"> Log in here and then come back!</a>
+      <a href="https://auth-poc-next.vercel.app/"> Log in here and then come back!</a>
       {!loading && (
         <img
           src="https://auth-poc-next.vercel.app/test-image.png"
